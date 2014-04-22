@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>
+      Google Maps Places
+    </title>
+    <link rel="stylesheet" href="css/bootstrap.min.css"/>
+    <link rel="stylesheet" href="css/style.css"/>
+    <link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700&amp;subset=latin,latin-ext">
+    <script src="https://maps.googleapis.com/maps/api/js?v=3.exp&sensor=false&libraries=places"></script>
+  </head>
+  <body>
+    <div class="container-fluid">
+      <div class="row-fluid">
+        <div class="span3">
+          <!--search place-->
+          <div id="places_holder">
+            <input id="autocomplete" type="text" placeholder="Add Place">
+            <div id="places_list_holder">
+              <ul>
+              </ul>
+            </div>
+          </div>
+        </div>
+        <div class="span9">
+          <!--map container-->
+          <div id="map_canvas"></div>
+        </div>
+      </div>
+    </div>
+    
+    <!-- vendor libraries -->
+    <script src="app/vendor/jquery-1.7.1.js"></script>
+    <script src="app/vendor/underscore.js"></script>
+    <script src="app/vendor/backbone.js"></script>
+    <script src="app/vendor/backbone-localstorage.js"></script>
+    
+    <!-- app -->
+    <script src="app/models/place.js"></script>
+    <script src="app/collections/place.js"></script>
+    <script src="app/views/place_list_item_view.js"></script>
+    <script src="app/views/place_list_view.js"></script>
+    <script src="app/views/place_marker_view.js"></script>
+    
+    <script src="app/app.js"></script>
+    
+  </body>
+</html>
