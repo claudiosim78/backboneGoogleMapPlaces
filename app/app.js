@@ -79,6 +79,9 @@ var AppView = Backbone.View.extend({
     bootstrap: function() {
         this._initialize_map(initial_position);
         this._initialize_places();
+        Places.fetch();
+        //create views
+        var list_view = new PlaceListView({model: Places, map: this.map});
     },
 
     //--------------------------------------
@@ -107,14 +110,6 @@ var AppView = Backbone.View.extend({
         self.bootstrap();
       }
 
-      //--------------------------------------
-      // Fetch (with delay)
-      //--------------------------------------
-      setTimeout(function(){ //delay markers popp
-        Places.fetch();
-        //create views
-        var list_view = new PlaceListView({model: Places, map: self.map});
-      }, 2000);
     }
 });
 
